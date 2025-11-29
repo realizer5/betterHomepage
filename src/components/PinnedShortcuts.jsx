@@ -51,10 +51,10 @@ export default function PinnedShortcuts() {
     };
 
     return (
-        <div className="absolute left-6 top-1/2 -translate-y-1/2">
+        <div className="absolute left-6 top-1/2 -translate-y-1/2 z-10">
             <div
                 className="
-          w-20 
+          w-20
           min-h-[300px]
           rounded-3xl
           border border-white/20
@@ -74,12 +74,12 @@ export default function PinnedShortcuts() {
                         }}
                         className="
               w-14 h-14
-              rounded-xl 
-              bg-white/10 
-              text-white 
-              text-sm 
+              rounded-xl
+              bg-white/10
+              text-white
+              text-sm
               flex items-center justify-center
-              hover:bg-white/20 
+              hover:bg-white/20
               transition
               px-2 text-center
             "
@@ -95,12 +95,12 @@ export default function PinnedShortcuts() {
                         onClick={() => openEditor(null)}
                         className="
               w-14 h-14
-              rounded-xl 
-              bg-white/10 
-              text-white 
+              rounded-xl
+              bg-white/10
+              text-white
               text-xl
               flex items-center justify-center
-              hover:bg-white/20 
+              hover:bg-white/20
               transition
             "
                         title="Add Shortcut"
@@ -114,19 +114,18 @@ export default function PinnedShortcuts() {
             {showEditor && (
                 <div
                     className="
-            fixed inset-0 
-            bg-black/40 
-            backdrop-blur-md 
+            fixed inset-y-0 left-25
+            bg-black/40
             flex items-center justify-center
           "
                 >
                     <div
                         className="
-              bg-black/70 
-              border border-white/20 
-              rounded-3xl 
-              p-6 
-              w-80 
+              bg-black/70
+              border border-white/20
+              rounded-3xl
+              p-6
+              w-80
               text-white
             "
                     >
@@ -139,8 +138,8 @@ export default function PinnedShortcuts() {
                             value={current.name}
                             onChange={(e) => setCurrent({ ...current, name: e.target.value })}
                             className="
-                w-full px-4 py-2 rounded-xl 
-                bg-white/10 border border-white/20 
+                w-full px-4 py-2 rounded-xl
+                bg-white/10 border border-white/20
                 outline-none mb-3
               "
                         />
@@ -150,8 +149,8 @@ export default function PinnedShortcuts() {
                             value={current.url}
                             onChange={(e) => setCurrent({ ...current, url: e.target.value })}
                             className="
-                w-full px-4 py-2 rounded-xl 
-                bg-white/10 border border-white/20 
+                w-full px-4 py-2 rounded-xl
+                bg-white/10 border border-white/20
                 outline-none mb-4
               "
                         />
@@ -180,10 +179,10 @@ export default function PinnedShortcuts() {
                                 <button
                                     onClick={handleSave}
                                     className="
-                    px-4 py-1 
-                    rounded-xl 
-                    bg-white/20 
-                    hover:bg-white/30 
+                    px-4 py-1
+                    rounded-xl
+                    bg-white/20
+                    hover:bg-white/30
                     transition
                   "
                                 >
