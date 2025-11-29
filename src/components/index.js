@@ -4,7 +4,7 @@ import PinnedShortcuts from "./PinnedShortcuts";
 import SearchBar from "./SearchBar";
 import WeatherWidget from "./WeatherWidget";
 import WidgetButtons from "./WidgetButtons";
-import BackgroundText from "./BackgroundText";
+import BackgroundManager from "./BackgroundManager";
 
 export {
     HeroTitle,
@@ -13,5 +13,5 @@ export {
     SearchBar,
     WeatherWidget,
     WidgetButtons,
-     BackgroundText
+    BackgroundManager
 }

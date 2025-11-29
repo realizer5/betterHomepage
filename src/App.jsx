@@ -1,28 +1,29 @@
-import { HeroTitle, SearchBar, BackgroundText, WidgetButtons, PinnedShortcuts } from "./components"; 
+import { HeroTitle, SearchBar, WidgetButtons, PinnedShortcuts } from "./components";
+import BackgroundManager from "./components/BackgroundManager";
 
 export default function App() {
   return (
     <div
       className="
         w-full h-screen 
-        bg-black 
-        text-white 
         relative 
         overflow-hidden
         flex items-center justify-center
       "
     >
+      {/* Fullscreen background system */}
+      <BackgroundManager />
+
       {/* Left pinned shortcuts */}
       <PinnedShortcuts />
 
       {/* CENTER CONTENT */}
-      <div className="flex flex-col items-center gap-6">
+      <div className="flex flex-col items-center gap-6 z-10">
         <HeroTitle />
         <SearchBar />
-        <BackgroundText />
       </div>
 
-      {/* Bottom-right widget buttons (Clock + Weather toggles) */}
+      {/* Bottom-right widget buttons */}
       <WidgetButtons />
     </div>
   );
